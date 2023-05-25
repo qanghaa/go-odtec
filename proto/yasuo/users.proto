@@ -5,7 +5,7 @@ package yasuo;
 import "google/protobuf/timestamp.proto";
 import "yasuo/enum.proto";
 
-option go_package = "go-od-architect/pkg/protobuf/yasuo/v2;ypb";
+option go_package = "go-odtec/pkg/protobuf/yasuo/v2;ypb";
 
 message Address {
   string Street = 1;

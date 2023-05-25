@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"go-od-architect/golibs/database"
+	"go-odtec/golibs/database"
 
 	"github.com/jackc/pgtype"
 )

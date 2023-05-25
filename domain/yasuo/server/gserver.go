@@ -1,10 +1,10 @@
 package server
 
 import (
-	repo "go-od-architect/domain/yasuo/repository"
-	srv "go-od-architect/domain/yasuo/service"
-	gtrans "go-od-architect/domain/yasuo/transport/grpc"
-	"go-od-architect/utils/database"
+	repo "go-odtec/domain/yasuo/repository"
+	srv "go-odtec/domain/yasuo/service"
+	gtrans "go-odtec/domain/yasuo/transport/grpc"
+	"go-odtec/utils/database"
 
 	"google.golang.org/grpc"
 )

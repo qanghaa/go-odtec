@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	"go-od-architect/domain/yasuo/entity"
-	"go-od-architect/utils/database"
+	"go-odtec/domain/yasuo/entity"
+	"go-odtec/utils/database"
 
 	"github.com/jackc/pgtype"
 )

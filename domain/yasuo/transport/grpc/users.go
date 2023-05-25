@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"go-od-architect/domain/yasuo/entity"
-	ypb "go-od-architect/pkg/protobuf/yasuo"
-	"go-od-architect/utils/database"
-	"go-od-architect/utils/idutil"
+	"go-odtec/domain/yasuo/entity"
+	ypb "go-odtec/pkg/protobuf/yasuo"
+	"go-odtec/utils/database"
+	"go-odtec/utils/idutil"
 
 	"github.com/jackc/pgtype"
 	"github.com/jackc/pgx"
