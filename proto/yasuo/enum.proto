@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package yasuo;
+
+option go_package = "go-od-architect/pkg/protobuf/yasuo/v2;ypb";
+
+enum Gender {
+  Female = 0;
+  Male = 1;
+  Another = 2; 
+} 
+

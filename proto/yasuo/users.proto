@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package yasuo;
+
+import "google/protobuf/timestamp.proto";
+import "yasuo/enum.proto";
+
+option go_package = "go-od-architect/pkg/protobuf/yasuo/v2;ypb";
+
+message Address {
+  string Street = 1;
+  string City = 2;
+  string State = 3;
+  string Country = 4; 
+}
+
+message CreateNewUserAccountRequest {
+  Gender gender = 1;
+  string email = 2;
+  string name = 3;
+  string avatar = 4;
+  google.protobuf.Timestamp birthday = 5;
+  Address address = 6;
+}
+
+message CreateNewUserAccountResponse {
+  string user_id = 1;
+}
+
+
+message GetUserProfileRequest {
+  string user_id = 1;
+}
+
+message GetUserProfileResponse {
+  string user_id = 1;
+  string email = 2;
+  string name = 3;
+  string avatar = 4;
+  google.protobuf.Timestamp birthday = 5;
+  Gender gender = 6;
+  Address address = 7;
+}
+
+message DeleteUserAccountRequest {
+  string user_id = 1;
+}
+
+message DeleteUserAccountResponse {
+}
+
+service UserService {
+  rpc CreateNewUserAccount(CreateNewUserAccountRequest) returns (CreateNewUserAccountResponse);
+  rpc GetUserProfile(GetUserProfileRequest) returns (GetUserProfileResponse);
+  rpc DeleteUserAccount(DeleteUserAccountRequest) returns (DeleteUserAccountResponse);
+}

@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package yone;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "go-od-architect/pkg/protobuf/yone/v2;ypb";
+
+message CreateNewPostRequest {
+  string user_id = 1;
+  string email = 2;
+  string name = 3;
+  string avatar = 4;
+  google.protobuf.Timestamp birthday = 5;
+  Gender gender = 6;
+}
+
+message CreateNewPostResponse {
+  string user_id = 1;
+}
+
+enum Gender {
+  Female = 0;
+  Male = 1;
+  Another = 2; 
+} 
+
+message GetUserProfileRequest {
+  string user_id = 1;
+}
+
+message GetNewUserAccountResponse {
+  string user_id = 1;
+  string email = 2;
+  string name = 3;
+  string avatar = 4;
+  google.protobuf.Timestamp birthday = 5;
+  Gender gender = 6;
+}
+
+message DeleteUserAccountRequest {
+  string user_id = 1;
+}
+
+message DeleteUserAccountResponse {
+}
+
+service UserService {
+  rpc CreateNewUserAccount(CreateUserProfileRequest) returns (CreateNewUserAccountResponse);
+  rpc GetUserProfile(GetUserProfileRequest) returns (GetNewUserAccountResponse);
+  rpc DeleteUserAccount(DeleteUserAccountRequest) returns (DeleteUserAccountResponse);
+}
