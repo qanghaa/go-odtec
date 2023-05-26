@@ -3,8 +3,8 @@ package http
 import (
 	"context"
 
-	"go-odtec/internal/golibs/database"
-	"go-odtec/internal/yasuo/entity"
+	"go-odtec/domain/yasuo/entity"
+	"go-odtec/utils/database"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgtype"
