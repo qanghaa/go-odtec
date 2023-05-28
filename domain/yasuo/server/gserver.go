@@ -36,3 +36,11 @@ func New(opts ...grpc.ServerOption) *Server {
 	)
 	return s
 }
+
+func (s *Server) InitDependencies() {
+
+}
+
+func (s *Server) GratefulShutdown() {
+
+}

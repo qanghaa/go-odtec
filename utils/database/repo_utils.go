@@ -2,6 +2,7 @@ package database
 
 import (
 	"fmt"
+	"go-odtec/abstraction"
 	"strconv"
 	"strings"
 
@@ -26,7 +27,7 @@ func GeneratePlaceholders(n int) string {
 	return builder.String()
 }
 
-func ScanAll[T Entity](rows pgx.Rows) ([]T, error) {
+func ScanAll[T abstraction.Entity](rows pgx.Rows) ([]T, error) {
 	var es = []T{}
 	for rows.Next() {
 		var e T

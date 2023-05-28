@@ -1,4 +1,4 @@
-package database
+package abstraction
 
 type Entity interface {
 	FieldMap() ([]string, []interface{})
