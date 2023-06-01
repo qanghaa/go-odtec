@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  generate_pb_go:
+    image: gen-go
+    build:
+      context: .
+      target: protoc_gen_go
+      dockerfile: ./proto.Dockerfile
+    working_dir: /proto/
+    volumes:
+      - "../proto/:/proto/"
+      - "../pkg/:/pkg/"
+    entrypoint: /proto/gen_go.sh

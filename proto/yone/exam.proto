@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package yone;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "go-odtec/pkg/protobuf/yone;ypb";
+
+message CreateExamRequest {
+string name = 1;
+string grade_to_pass = 2;
+}
+
+message CreateExamResponse {
+  string exam_id = 1;
+}
+
+service UserService {
+  rpc CreateExam(CreateExamRequest) returns (CreateExamResponse);
+}
